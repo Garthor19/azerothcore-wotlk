@@ -3108,6 +3108,10 @@ bool Player::addSpell(uint32 spellId, uint8 addSpecMask, bool updateActive, bool
 
 bool Player::CheckSkillLearnedBySpell(uint32 spellId)
 {
+    // ELGAR: bypass all the checks so any class can learn any skill
+    return true;
+
+
     if (!sWorld->getBoolConfig(CONFIG_VALIDATE_SKILL_LEARNED_BY_SPELLS))
         return true;
 
